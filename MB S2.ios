@@ -1,7 +1,7 @@
 !Basics
 enable
 conf t
-hostname MB-R3
+hostname MB-S2
 no ip domain-lookuip
 enable secret password
 !Configure passwords as encrypted

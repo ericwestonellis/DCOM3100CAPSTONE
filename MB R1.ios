@@ -65,7 +65,10 @@ interface S0/0/0
 
 !Disable AUX Port access
 
+!Banner Warning
 
 !Close all switch ports not in use (Assume ports 1-10 are used, plus any other ports we actually use)
 
 !Data Centre switches should register 1 MAC address per open switch port. Other devices
+
+!attempting access should cause the port to shut, not the router.

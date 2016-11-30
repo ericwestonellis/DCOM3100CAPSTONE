@@ -1,0 +1,76 @@
+!Basics
+enable
+conf t
+hostname B2-S2
+no ip domain-lookuip
+enable secret password
+!Configure passwords as encrypted
+service password-encryption
+
+line vty 0 15
+password password
+logging synchronous
+login
+
+con 0
+logging synchronous
+password password
+login
+
+!IPv4 VLSM Addressing
+interface S0/0/0
+
+
+!IPv6 Addressing
+interface s0/0/0
+
+
+!Multi-area OSPFv2
+
+!Configured OSPF Advanced Features
+
+!Configure OSPFv3
+
+!LACP (Link Aggregation Control Protocol)
+
+!RSTP (Rapid Spanning Tree)
+
+!First Hop Redundancy
+
+!Setting up SSH
+
+!Link to Forest Campus is in OSPF Area 0
+
+!All routing internal to the Pain Court Campus is area 42
+
+!Disable Routing updates from being sent across "Stub" lan interfaces
+
+!Require OSPF Authentication, Area 0 key "Forest", Area 42 key "PainCourt"
+
+!Modify the bandwidth (to match reqs._
+
+!Configure speeds on links in area 42
+
+!Load balance all links in area 42
+
+!Summarize the route presented to Area 0 by Area 42
+
+!All non-local traffic is sent to Forest (Area 0)
+
+
+
+!Require username and password for all logins
+
+!Restrict access to Console connections
+
+!Restrict VTY connections to only allow SSHv2, and Only originating in Pain Court Campus. (use company domain   forestcollege.ca
+
+!Disable AUX Port access
+
+!Banner Warning
+
+!Close all switch ports not in use (Assume ports 1-10 are used, plus any other ports we actually use)
+
+!Data Centre switches should register 1 MAC address per open switch port. Other devices
+
+!attempting access should cause the port to shut, not the router.
